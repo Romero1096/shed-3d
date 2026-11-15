@@ -135,7 +135,7 @@ const RIDGE_TOP = yTop(W / 2) + ROOF_THK / Math.cos(ANG);   // top of shingles a
 const DOOR_W = 60, DOOR_H = 73, WIN_W = 14, WIN_H = 27, WIN_SILL = 46;
 const AC_W = 24.25, AC_H = 14.5, AC_D = 20.25;
 const AC_SLV_W = 25.5, AC_SLV_H = 15.25, AC_SLV_D = 17.5, AC_SILL = 14;
-const TV_W = 48.5, TV_H = 28, TV_D = 1.5, TV_CTR = 44;
+const TV_W = 48.5, TV_H = 28, TV_D = 1.5, TV_CTR = 57;
 
 const WALLS = {
   back:  { L: W - 2 * T, origin: [T, F, 0],     rot: 0,            end: true,  name: 'Back' },
@@ -439,7 +439,7 @@ function buildWall(parent, key) {
 
   // TV / desk outlets on the left wall (centered with the default desk at mid-wall)
   if (key === 'left') {
-    addWallOutlet(LEN / 2, 50, false);
+    addWallOutlet(LEN / 2, 60, false);
     addWallOutlet(LEN / 2 - 26.2, 30, false);
   }
 
@@ -555,7 +555,7 @@ function setDoors(open, instant) {
 const TYPES = {
   desk: { name: 'Desk 60×30', w: 60, d: 30, h: 29 },
   chair: { name: 'Office chair', w: 25, d: 25, h: 43 },
-  tv: { name: '55″ wall TV', w: TV_W, d: 4, h: 58, elev: TV_CTR - TV_H / 2 },
+  tv: { name: '55″ wall TV', w: TV_W, d: 4, h: 71, elev: TV_CTR - TV_H / 2 },
   bookshelf: { name: 'Bookshelf 36×12×72', w: 36, d: 12, h: 72 },
   ac: { name: 'Window AC', w: 19, d: 16, h: 13, elev: 44 },
   fridge: { name: 'Mini-fridge', w: 19, d: 20, h: 33 },
